@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Proposals</title>
+</head>
+<body>
+    <h1>Manage Proposals</h1>
+    <ul>
+        {% for proposal in proposals %}
+            <li><a href="{% url 'edit_proposal' proposal.id %}">{{ proposal.title }}</a></li>
+            <!-- Display other proposal details as needed -->
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Proposal</title>
+</head>
+<body>
+    <h1>Create Proposal</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Title"><br><br>
+        <input type="text" name="company_name" placeholder="Company Name"><br><br>
+        <input type="text" name="contact_name" placeholder="Contact Name"><br><br>
+        <input type="email" name="email" placeholder="Email"><br><br>
+        <input type="text" name="phone_number" placeholder="Phone Number"><br><br>
+        <textarea name="proposal_summary" placeholder="Proposal Summary"></textarea><br><br>
+        <!-- Add more input fields based on your model -->
+        <button type="submit">Create Proposal</button>
+    </form>
+</body>
+</html>

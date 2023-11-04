@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Proposal</title>
+</head>
+<body>
+    <h1>Edit Proposal</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" value="{{ proposal.title }}"><br><br>
+        <input type="text" name="company_name" value="{{ proposal.company_name }}"><br><br>
+        <input type="text" name="contact_name" value="{{ proposal.contact_name }}"><br><br>
+        <input type="email" name="email" value="{{ proposal.email }}"><br><br>
+        <input type="text" name="phone_number" value="{{ proposal.phone_number }}"><br><br>
+        <textarea name="proposal_summary">{{ proposal.proposal_summary }}</textarea><br><br>
+        <!-- Add more input fields based on your model -->
+        <button type="submit">Update Proposal</button>
+    </form>
+</body>
+</html>
